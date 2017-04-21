@@ -8,6 +8,10 @@ describe('Fixnum#allergy') do
   end
 
   it('will evaluate a score of 3 as an egg and peanuts allergy') do
-    expect(3.allergy).to(eq('eggs, peanuts'))
+    expect(3.allergy).to(eq('peanuts, eggs'))
+  end
+
+  it('will evaluate a score of 6 as an shellfish and peanuts allergy') do
+    expect(6.allergy).to(eq('shellfish, peanuts'))
   end
 end
