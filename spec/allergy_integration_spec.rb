@@ -10,4 +10,11 @@ describe('the allergy path', {:type => :feature}) do
     click_button('Show my allergies!')
     expect(page).to have_content("pollen, chocolate, shellfish")
   end
+
+  it('processes user score and returns allergins') do
+    visit('/')
+    fill_in('score', :with => 1 )
+    click_button('Show my allergies!')
+    expect(page).to have_content("eggs")
+  end
 end
